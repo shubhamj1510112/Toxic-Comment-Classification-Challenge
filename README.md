@@ -53,33 +53,33 @@ Here, when we talk about these parameters in the context of multi-label classifi
 
 <p align="justify"> Figure 1: Line plot displaying the variable importance value for the “toxic” target variable. The overall importance values were calculated based on the mean decrease in accuracy value and the mean decrease in Gini values using random forest in “caret” package in r. </p>
 
-![Atl Text]()
+![Atl Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-1.jpeg)
  
  
 <p align="justify"> Figure 2: Line plot displaying the variable importance value for the “severe_toxic” target variable. The overall importance values were calculated based on the mean decrease in accuracy value and the mean decrease in Gini values using random forest in “caret” package in r. </p>
 
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-2.jpeg)
 
  
 <p align="justify"> Figure 3: Line plot displaying the variable importance value for the “obscene” target variable. The overall importance values were calculated based on the mean decrease in accuracy value and the mean decrease in Gini values using random forest in “caret” package in r. </p>
 
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-3.jpeg)
 
 
 <p align="justify"> Figure 4: Line plot displaying the variable importance value for the “threat” target variable. The overall importance values were calculated based on the mean decrease in accuracy value and the mean decrease in Gini values using random forest in “caret” package in r. </p>
 
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-4.jpeg)
 
 
  
 <p align="justify"> Figure 5: Line plot displaying the variable importance value for the “insult” target variable. The overall importance values were calculated based on the mean decrease in accuracy value and the mean decrease in Gini values using random forest in “caret” package in r. </p>
 
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-5.jpeg)
 
 
 <p align="justify"> Figure 6: Line plot displaying the variable importance value for the “identity_hate” target variable. The overall importance values were calculated based on the mean decrease in accuracy value and the mean decrease in Gini values using random forest in “caret” package in r. </p>
   
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-6.jpeg)
 
 
 <p align="justify"> These top-20 most important variables from each type of toxicity were combined and uniquely sorted. A total of 49 most important variables were identified by this approach. Now, these corresponding terms to these variables were identified. We found that many of the terms in these selected variables were very common words which may not seem to associate with any type of toxicity, however, these common terms/words are very useful in distinguishing among the different types of toxicities. For example “bad” is toxic but “very bad” is severely toxic, thus to distinguish among toxic and severely toxic the word very is crucial. Further, more words related to language toxicity were downloaded from a database known as “encycloDB database” (Link: https://github.com/turalus/encycloDB/blob/master/Dirty%20Words/DirtyWords.csv). These words were added to the previously selected list of 49 terms. Now in total 110 terms/words were selected for further analysis. The list of these words can be obtained in the file=final_selected_variables.csv which is also provided with this submission. Now the frequency of these words will work as the direct predictor variable for model training and subsequent predictions. Further, processing to these direct frequencies is not required as the terms and comments text both were very well pre-processed.</p>
@@ -105,12 +105,12 @@ I have compared these five methods using the sample data derived using random sa
  
 <p align="justify"> Figure 7: The comparison of the five different types of problem transformation methods. Here, five standard evaluation metrics were used for the comparison, these are: accuracy (acc), f1 score (f1), hamming loss (hamloss), precision or positive predictive value (ppv), and sensitivity or true positive rate (tpr)</p>
 
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-7.jpeg)
 
 
 <p align="justify"> Figure 8: The comparison of the five different types of problem transformation methods. This figure conveys the information similar to Figure 7 but absolute values are mentioned in the matrix format. Here also, five standard evaluation metrics were used for the comparison, these are: accuracy (acc), f1 score (f1), hamming loss (hamloss), precision or positive predictive value (ppv), and sensitivity or true positive rate (tpr)</p>
   
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-8.jpeg)
 
 
 <p align="justify"> Please note that, in this work, as suggested at the kaggle competition web page the macro-average method was used for calculating different types of evaluation metrics.
@@ -121,7 +121,7 @@ As we know that the normal binary classifiers work as the core learner for the c
  
 <p align="justify"> Figure 9: The comparison of the different types of base classifier which will work as the core learners in the final classifier chain. The accuracy is used as the metric of comparison. The box-plot was generated using the individual performance on the 5-fold cross validation. </p>
   
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-9.jpeg)
 
 
 <p align="justify"> This comparison involved the 5-fold cross validation. Here, the use of 5-fold cross validation was very important because this is the most efficient way I could compare these algorithms for their bias and variance. High bias of an algorithm represents that the algorithm has too many assumptions to be met while training and while making predictions which leads to poor performance. This is one of the major causes of underfitting by a particular algorithm. On the other hand, high variance shows that algorithm did not learn any pattern for the data but just memorized the training data and because of this it shows very good performance on training data but very poor performance on real data, this is a major cause of overfitting by a particular algorithm. The bias and variance can vary from algorithm to algorithm for the same training data because different algorithm has different parameters to be estimated during training and these parameters are crucial in defining the overfitting or underfitting by an algorithm. Therefore, I compared these algorithms to select the best algorithm with highest performance and very low bias and very low variance for our regression problem. From the Figure 9 it is apparent that the xgBoost outperformed all the other algorithms in terms of accuracy with low variance and low bias. Thus, this algorithm was selected for further analysis. </p>
@@ -132,7 +132,7 @@ As we know that the normal binary classifiers work as the core learner for the c
  
 <p align="justify"> Figure 10: The comparison of the different xgBoost base classifier trained at different max-depth and nrounds parameters. The accuracy is used as the metric of comparison. The box-plot was generated using the individual performance on the 5-fold cross validation. </p>
 
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-10.jpeg)
 
 
 ### 5.3 Training of final multi-label classifier
@@ -151,12 +151,12 @@ Evaluation of the trained model is essential to understand the strength and weak
  
 <p align="justify"> Figure 11: The comparison of the performance shown separately for each toxicity type. Here also, five standard evaluation metrics were used for the comparison, these are: BAC, AUC for ROC curve, MMCE, FNR, and FPR.</p>
 
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-11.jpeg)
 
  
 <p align="justify"> Figure 12: The comparison of the performance shown separately for each toxicity type. Here the absolute values of the five standard evaluation metrics (BAC, AUC for ROC curve, MMCE, FNR, and FPR) are mentioned in the individual tiles.</p>
 
-![Alt Text]()
+![Alt Text](https://github.com/shubhamj1510112/Toxic-Comment-Classification-Challenge/blob/master/Figure-12.jpeg)
 
 
 <p align="justify"> From the individual comparison it is apparent that the predictive model is very accurate in predicting the severe toxicity, obscene, and identity hate, however, it only marginally good in predicting the threat and insult types of toxicities. Thus, more improvement in the prediction for threat and insult toxicity types is required.</p>
@@ -190,4 +190,4 @@ Yours sincerely,
 
 Shubham Kumar Jaiswal
 
-Registered email: shubhamj.jaiswal89@gmail.com
+email: shubhamj.jaiswal89@gmail.com
