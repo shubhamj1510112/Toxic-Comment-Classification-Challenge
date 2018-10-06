@@ -1,4 +1,4 @@
-# Toxic-Comment-Classification-Challenge
+# Toxic Comment Classification Challenge
 
 ## 1.	Problem statement
 
